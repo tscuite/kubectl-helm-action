@@ -25,6 +25,7 @@ fi
 helm upgrade --install huoxian --create-namespace -n iast-${HELM_NS} ./DongTai/deploy/kubernetes/helm/ \
 --set sca.sca_token=${TOKEN_SCA} \
 --set usb.usb_token=${TOKEN_SCA} \
+--set logstash="false"
 --set mysql.host=iast-mysql-${HELM_MYSQL}.huoxian.cn \
 --set tag=${MAXVALUEQ}${GITHUB_REF_NAME}-latest \
 --set build.${PROJECT}_number=iast-${GITHUB_RUN_NUMBER} \
