@@ -1,4 +1,4 @@
-#!/bin/sh -eu
+#!/bin/sh -u
 
 : "${KUBE_CONFIG_DATA?Must be specified}"
 
