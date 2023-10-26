@@ -50,7 +50,7 @@ while [ 0 -eq 0 ]; do
     --set usb.usb_token=${TOKEN_SCA} \
     --set mysql.port=${MYPORT} \
     --set logstash="false" \
-    --set mysql.host=iast-mysql-${HELM_MYSQL}.huoxian.cn \
+    --set mysql.host=dongtai-mysql \
     --set tag=${MAXVALUEQ}${GITHUB_REF_NAME}-latest \
     --set build.${PROJECT}_number=iast-${GITHUB_RUN_NUMBER} \
     --set develop.agentZip=${HELM_ZIP} \
