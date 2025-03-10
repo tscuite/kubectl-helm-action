@@ -15,7 +15,6 @@ OPTIONS=""
 if [ ${MAX} = true ]; then OPTIONS="--set max=true" MAXVALUE="-max" MAXVALUEQ="max-"; fi
 if [ ${GITHUB_REF_NAME} = "develop" ]; then
   HELM_NS="test${MAXVALUE}"
-  HELM_MYSQL="test${MAXVALUE}"
   HELM_ZIP="test"
   MYPORT="3306"
 elif [ ${GITHUB_REF_NAME} = "beta" ]; then
@@ -50,7 +49,6 @@ while [ 0 -eq 0 ]; do
     --set usb.usb_token=${TOKEN_SCA} \
     --set mysql.port=${MYPORT} \
     --set logstash="false" \
-    --set mysql.host=dongtai-mysql \
     --set tag=${MAXVALUEQ}${GITHUB_REF_NAME}-latest \
     --set build.${PROJECT}_number=iast-${GITHUB_RUN_NUMBER} \
     --set develop.agentZip=${HELM_ZIP} \
